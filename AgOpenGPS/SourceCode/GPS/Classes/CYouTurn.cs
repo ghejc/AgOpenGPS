@@ -301,7 +301,7 @@ namespace AgOpenGPS
             if (start.easting == 88888) return false;
 
             //get the dubins path vec3 point coordinates of path
-            ytList?.Clear();
+            ytList.Clear();
 
             //find a path from start to goal - diagnostic, but also used later
             mazeList = mf.mazeGrid.SearchForPath(start, stop);
@@ -991,7 +991,7 @@ namespace AgOpenGPS
                 case 0: //find the crossing points
                     if (FindCurveTurnPoints()) youTurnPhase = 1;
                     else mf.mc.isOutOfBounds = true;
-                    ytList?.Clear();
+                    ytList.Clear();
                     break;
 
                 case 1:
@@ -1233,7 +1233,7 @@ namespace AgOpenGPS
             {
                 case 0: //find the crossing points
                     if (FindCurveTurnPoints()) youTurnPhase = 1;
-                    ytList?.Clear();
+                    ytList.Clear();
                     break;
 
                 case 1:
@@ -1417,7 +1417,7 @@ namespace AgOpenGPS
         {
             //fix you turn
             isYouTurnTriggered = false;
-            ytList?.Clear();
+            ytList.Clear();
             mf.AutoYouTurnButtonsReset();
             ResetCreatedYouTurn();
             turnDistanceAdjuster = 0;
@@ -1477,7 +1477,7 @@ namespace AgOpenGPS
             turnDistanceAdjuster = 0;
             youTurnPhase = 0;
             //isOutOfBounds = false;
-            ytList?.Clear();
+            ytList.Clear();
         }
 
         //build the points and path of youturn to be scaled and transformed

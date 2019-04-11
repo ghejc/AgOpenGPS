@@ -323,7 +323,8 @@ Field	Meaning
                     int decim = words[2].IndexOf(".", StringComparison.Ordinal);
                     decim -= 2;
                     double.TryParse(words[2].Substring(0, decim), NumberStyles.Float, CultureInfo.InvariantCulture, out latitude);
-                    double.TryParse(words[2].Substring(decim), NumberStyles.Float, CultureInfo.InvariantCulture, out double temp);
+                    double temp;
+                    double.TryParse(words[2].Substring(decim), NumberStyles.Float, CultureInfo.InvariantCulture, out temp);
                     temp *= 0.01666666666666666666666666666667;
                     latitude += temp;
                     if (words[3] == "S")
@@ -376,8 +377,9 @@ Field	Meaning
                 if (fixFrom == "OGI")
                 {
                     //get latitude and convert to decimal degrees
+                    double temp;
                     double.TryParse(words[2].Substring(0, 2), NumberStyles.Float, CultureInfo.InvariantCulture, out latitude);
-                    double.TryParse(words[2].Substring(2), NumberStyles.Float, CultureInfo.InvariantCulture, out double temp);
+                    double.TryParse(words[2].Substring(2), NumberStyles.Float, CultureInfo.InvariantCulture, out temp);
                     temp *= 0.01666666666666666666666666666667;
                     latitude += temp;
                     if (words[3] == "S")
@@ -498,8 +500,9 @@ Field	Meaning
                 if (fixFrom == "RMC")
                 {
                     //get latitude and convert to decimal degrees
+                    double temp;
                     double.TryParse(words[3].Substring(0, 2), NumberStyles.Float, CultureInfo.InvariantCulture, out latitude);
-                    double.TryParse(words[3].Substring(2), NumberStyles.Float, CultureInfo.InvariantCulture, out double temp);
+                    double.TryParse(words[3].Substring(2), NumberStyles.Float, CultureInfo.InvariantCulture, out temp);
                     latitude += temp * 0.01666666666666666666666666666667;
 
                     if (words[4] == "S")

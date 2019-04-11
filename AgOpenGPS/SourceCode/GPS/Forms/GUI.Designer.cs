@@ -2395,8 +2395,8 @@ namespace AgOpenGPS
                     for (int j = 0; j < MAXSECTIONS; j++)
                     {
                         //clean out the lists
-                        section[j].patchList?.Clear();
-                        section[j].triangleList?.Clear();
+                        section[j].patchList.Clear();
+                        section[j].triangleList.Clear();
                     }
 
                     //clear out the contour Lists
@@ -2999,10 +2999,10 @@ namespace AgOpenGPS
                     for (int j = 0; j < MAXSECTIONS; j++)
                     {
                         //clean out the lists
-                        section[j].patchList?.Clear();
-                        section[j].triangleList?.Clear();
+                        section[j].patchList.Clear();
+                        section[j].triangleList.Clear();
                     }
-                    patchSaveList?.Clear();
+                    patchSaveList.Clear();
 
                 }
                 else TimedMessageBox(1500, "Nothing Deleted", "Action has been cancelled");
@@ -3068,10 +3068,10 @@ namespace AgOpenGPS
         private void deleteContourPathsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //FileCreateContour();
-            ct.stripList?.Clear();
-            ct.ptList?.Clear();
-            ct.ctList?.Clear();
-            contourSaveList?.Clear();
+            ct.stripList.Clear();
+            ct.ptList.Clear();
+            ct.ctList.Clear();
+            contourSaveList.Clear();
         }
 
 

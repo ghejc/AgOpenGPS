@@ -45,7 +45,7 @@ namespace AgOpenGPS
         {
             //clear out the reference list
             lblCurveExists.Text = "Curve Being Set";
-            mf.curve.refList?.Clear();
+            mf.curve.refList.Clear();
             mf.curve.isOkToAddPoints = true;
             btnBPoint.Enabled = true;
             btnAPoint.Enabled = false;
@@ -104,7 +104,7 @@ namespace AgOpenGPS
             else
             {
                 mf.curve.isCurveSet = false;
-                mf.curve.refList?.Clear();
+                mf.curve.refList.Clear();
             }
             mf.FileSaveCurveLine();
             Close();
@@ -148,7 +148,7 @@ namespace AgOpenGPS
             }
 
             //make a list to draw
-            mf.curve.refList?.Clear();
+            mf.curve.refList.Clear();
             for (int i = 0; i < cnt; i++)
             {
                 mf.curve.refList.Add(arr[i]);

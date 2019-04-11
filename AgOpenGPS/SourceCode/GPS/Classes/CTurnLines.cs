@@ -60,8 +60,8 @@ namespace AgOpenGPS
 
         public void ResetTurn()
         {
-            calcList?.Clear();
-            turnLine?.Clear();
+            calcList.Clear();
+            turnLine.Clear();
         }
 
         public void FixTurnLine(double totalHeadWidth, List<CBndPt> curBnd, double spacing)

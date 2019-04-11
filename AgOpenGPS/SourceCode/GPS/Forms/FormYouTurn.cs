@@ -1246,48 +1246,48 @@ namespace AgOpenGPS
         private void btnToggle3_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 0))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11111110;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00000001;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xFE;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x01;
             FunctionButtonsOnOff();
         }
 
         private void btnToggle4_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 1))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11111101;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00000010;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xFD;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x02;
             FunctionButtonsOnOff();
         }
 
         private void btnToggle5_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 2))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11111011;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00000100;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xFB;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x04;
             FunctionButtonsOnOff();
         }
 
         private void btnToggle6_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 3))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11110111;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00001000;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xF7;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x08;
             FunctionButtonsOnOff();
         }
 
         private void btnToggle7_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 4))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11101111;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00010000;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xEF;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x10;
             FunctionButtonsOnOff();
         }
 
         private void btnToggle8_Click(object sender, EventArgs e)
         {
             if (IsBitSet(mf.mc.machineControlData[mf.mc.cnYouTurn], 5))
-                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0b11011111;
-            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0b00100000;
+                mf.mc.machineControlData[mf.mc.cnYouTurn] &= 0xDF;
+            else mf.mc.machineControlData[mf.mc.cnYouTurn] |= 0x20;
             FunctionButtonsOnOff();
         }
 

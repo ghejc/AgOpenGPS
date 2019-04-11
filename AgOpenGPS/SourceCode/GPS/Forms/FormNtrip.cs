@@ -106,7 +106,8 @@ namespace AgOpenGPS
                 if (strOctet.Length > 3 || strOctet.Length == 0) return false;
 
                 //make sure all digits
-                if (!int.TryParse(strOctet, out int temp2)) return false;
+                int temp2;
+                if (!int.TryParse(strOctet, out temp2)) return false;
 
                 //make sure not more then 255
                 temp = int.Parse(strOctet);

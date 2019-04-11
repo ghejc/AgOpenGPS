@@ -254,7 +254,7 @@ namespace AgOpenGPS
             }
             //else
             //{
-            //    shuttleDubinsList?.Clear();
+            //    shuttleDubinsList.Clear();
             //    return;
             //}
 

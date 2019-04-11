@@ -993,8 +993,8 @@ namespace AgOpenGPS
             for (int j = 0; j < MAXSECTIONS; j++)
             {
                 //clean out the lists
-                section[j].patchList?.Clear();
-                section[j].triangleList?.Clear();
+                section[j].patchList.Clear();
+                section[j].triangleList.Clear();
             }
 
             //clear out the contour Lists
@@ -1238,12 +1238,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos3, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11111110;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xFE;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos3, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00000001;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x01;
                     }
                     break;
 
@@ -1251,12 +1251,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos4, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11111101;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xFD;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos4, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00000010;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x02;
                     }
                     break;
 
@@ -1264,12 +1264,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos5, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11111011;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xFB;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos5, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00000100;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x04;
                     }
                     break;
 
@@ -1277,12 +1277,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos6, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11110111;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xF7;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos6, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00001000;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x08;
                     }
                     break;
 
@@ -1290,12 +1290,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos7, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11101111;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xEF;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos7, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00010000;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x10;
                     }
                     break;
 
@@ -1303,12 +1303,12 @@ namespace AgOpenGPS
                     if (action == 0)
                     {
                         TimedMessageBox(1000, seq.pos8, "Turn Off");
-                        mc.machineControlData[mc.cnYouTurn] &= 0b11011111;
+                        mc.machineControlData[mc.cnYouTurn] &= 0xDF;
                     }
                     else
                     {
                         TimedMessageBox(1000, seq.pos8, "Turn On");
-                        mc.machineControlData[mc.cnYouTurn] |= 0b00100000;
+                        mc.machineControlData[mc.cnYouTurn] |= 0x20;
                     }
                     break;
             }

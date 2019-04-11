@@ -14,8 +14,8 @@ namespace AgOpenGPS
 
         public void ResetGeoFence()
         {
-            calcList?.Clear();
-            geoFenceLine?.Clear();
+            calcList.Clear();
+            geoFenceLine.Clear();
         }
 
         public bool IsPointInGeoFenceArea(vec3 testPointv2)

@@ -21,7 +21,7 @@ namespace AgOpenGPS
         {
             mf.curve.isSmoothWindowOpen = false;
             mf.curve.SaveSmoothAsRefList();
-            mf.curve.smooList?.Clear();
+            mf.curve.smooList.Clear();
             Close();
         }
 
@@ -36,7 +36,7 @@ namespace AgOpenGPS
         {
             mf.curve.isSmoothWindowOpen = false;
             Close();
-            mf.curve.smooList?.Clear();
+            mf.curve.smooList.Clear();
         }
 
         private void btnNorth_MouseDown(object sender, MouseEventArgs e)
@@ -57,7 +57,7 @@ namespace AgOpenGPS
         {
             mf.curve.isSmoothWindowOpen = false;
             mf.curve.SaveSmoothAsRefList();
-            mf.curve.smooList?.Clear();
+            mf.curve.smooList.Clear();
             mf.FileSaveCurveLine();
             Close();
         }

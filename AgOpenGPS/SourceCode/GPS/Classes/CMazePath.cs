@@ -203,7 +203,7 @@ namespace AgOpenGPS
             //X
             ptt.easting = iCurrent - (iCurrent / numCols * numCols);
 
-            mazeList?.Clear();
+            mazeList.Clear();
             mazeList.Add(ptt);
 
             for (int i = iFront; i >= 0; i--)

@@ -277,7 +277,7 @@ namespace AgOpenGPS
             textboxSender.Text = Regex.Replace(textboxSender.Text, "[^0-9.]", "");
             textboxSender.SelectionStart = cursorPosition;
             string line = tboxHeading.Text.Trim();
-            if (line?.Length == 0) line = "0";
+            if (line.Length == 0) line = "0";
             if (line == ".") line = "0";
             upDnHeading = double.Parse(line, CultureInfo.InvariantCulture);
             mf.ABLine.abHeading = glm.toRadians(Math.Round(upDnHeading, 6));

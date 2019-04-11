@@ -595,7 +595,7 @@ namespace AgOpenGPS
                 }
 
                 //make a list to draw
-                ctList?.Clear();
+                ctList.Clear();
                 for (int i = 0; i < cnt; i++)
                 {
                     ctList.Add(arr[i]);
@@ -976,8 +976,8 @@ namespace AgOpenGPS
         public void ResetContour()
         {
             stripList.Clear();
-            ptList?.Clear();
-            ctList?.Clear();
+            ptList.Clear();
+            ctList.Clear();
         }
     }//class
 }//namespace

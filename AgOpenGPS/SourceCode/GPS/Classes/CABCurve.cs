@@ -98,7 +98,7 @@ namespace AgOpenGPS
             }
 
             //make a list to draw
-            smooList?.Clear();
+            smooList.Clear();
             for (int i = 0; i < cnt; i++)
             {
                 smooList.Add(arr[i]);
@@ -135,7 +135,7 @@ namespace AgOpenGPS
             if (cnt == 0) return;
 
             //eek
-            refList?.Clear();
+            refList.Clear();
 
             //copy to an array to calculate all the new headings
             vec3[] arr = new vec3[cnt];
@@ -231,7 +231,7 @@ namespace AgOpenGPS
             howManyPathsAway = Math.Round(minDistance / widthMinusOverlap, 0, MidpointRounding.AwayFromZero);
 
             //build the current line
-            curList?.Clear();
+            curList.Clear();
             for (int i = 0; i < ptCount; i++)
             {
                 var point = new vec3(
@@ -577,8 +577,8 @@ namespace AgOpenGPS
 
         public void ResetCurveLine()
         {
-            curList?.Clear();
-            refList?.Clear();
+            curList.Clear();
+            refList.Clear();
             isCurveSet = false;
             isOkToAddPoints = false;
             closestRefIndex = 0;

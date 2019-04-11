@@ -13,7 +13,9 @@ namespace AgOpenGPS
         private int _switchValue;
         private int CurrentSwitchValue
         {
-            get =>  _switchValue;
+        	get {
+        		return _switchValue;
+        	}
             set
             {
                 //compares the last recorded value to the current switch value

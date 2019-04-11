@@ -131,7 +131,7 @@ namespace AgOpenGPS
 
             if (cnt < 3)
             {
-                mazeList?.Clear();
+                mazeList.Clear();
                 return mazeList;
             }
 
@@ -203,7 +203,7 @@ namespace AgOpenGPS
             }
 
             //clear the list and reload with calc headings - first and last droppped
-            mazeList?.Clear();
+            mazeList.Clear();
 
             for (int i = mazeScale; i < cnt - mazeScale; i++)
             {

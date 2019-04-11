@@ -51,42 +51,42 @@ namespace AgOpenGPS
                     //if (genPath.isBtnDriveGenPathOn| recPath.isDrivingRecordedPath)
                     if (recPath.isDrivingRecordedPath)
                     {
-                        mc.machineControlData[mc.cnPedalControl] |= 0b11000000;
+                        mc.machineControlData[mc.cnPedalControl] |= 0xC0;
                     }
                     //make it not go - and with zero
                     else
                     {
-                        mc.machineControlData[mc.cnPedalControl] &= 0b00111111;
+                        mc.machineControlData[mc.cnPedalControl] &= 0x3F;
                     }
                 }
                 else //in AutoDrive and FreeDrive
                 {
-                    mc.machineControlData[mc.cnPedalControl] |= 0b11000000;
+                    mc.machineControlData[mc.cnPedalControl] |= 0xC0;
                 }
 
                 //Is there something in the way?
                 if (isLidarBtnOn && (mc.lidarDistance > 200 && mc.lidarDistance < 1000))
                 {
-                    mc.machineControlData[mc.cnPedalControl] &= 0b00111111;
+                    mc.machineControlData[mc.cnPedalControl] &= 0x3F;
                 }
             }
             else // Auto/Manual is in Manual so release the clutch
             {
                 //release the clutch for manual driving
-                mc.machineControlData[mc.cnPedalControl] |= 0b01000000;
-                mc.machineControlData[mc.cnPedalControl] &= 0b01111111;
+                mc.machineControlData[mc.cnPedalControl] |= 0x40;
+                mc.machineControlData[mc.cnPedalControl] &= 0x7F;
             }
 
             //pause the thing if paused. Duh.
             if (recPath.isPausedDrivingRecordedPath)
             {
-                mc.machineControlData[mc.cnPedalControl] &= 0b00111111;
+                mc.machineControlData[mc.cnPedalControl] &= 0x3F;
             }
 
             //gone out of bounds so full stop.
             if (mc.isOutOfBounds)
             {
-                mc.machineControlData[mc.cnPedalControl] &= 0b00111111;
+                mc.machineControlData[mc.cnPedalControl] &= 0x3F;
             }
 
             //send out to network

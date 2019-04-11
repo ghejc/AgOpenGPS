@@ -1180,7 +1180,7 @@ namespace AgOpenGPS
 
                         if (numPoints > 0)
                         {
-                            curve.refList?.Clear();
+                            curve.refList.Clear();
 
                             //load the line
                             for (int i = 0; i < numPoints; i++)
